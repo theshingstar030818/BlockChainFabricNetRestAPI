@@ -10,4 +10,3 @@
 # BlockChainFabricNetRestAPI
 BlockChainFabricNetRestAPI is  built in PHP/Laravel.
 This supports RestAPIs for applications and mobile apps.
->>>>>>> 945d8d560dfc868dd6121a6d24fc90c821fbf313
