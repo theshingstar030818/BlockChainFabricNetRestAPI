@@ -12,7 +12,9 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call(UserSeeder::class);
-        User::create(['name' => 'user03', 'email' => 'user03@mail.ru', 'password' => 'user03']);
+        $this->call(UserSeeder::class);
+        $this->call(EsnbcSeeder::class);
+        $this->call(EsnbcSubsetSeeder::class);
+        // User::create(['name' => 'user03', 'email' => 'user03@mail.ru', 'password' => 'user03']);
     }
 }
