@@ -24,7 +24,7 @@ class Esnbc extends JsonResource
             'supplier' => $this->supplier,
             'origin' => $this->origin,
             'price' => $this->price,
-            'update_type' => $this->udpate_type,
+            'update_type' => $this->update_type,
             'is_updated_to_fabric' => $this->is_updated_to_fabric,
         ];
     }
