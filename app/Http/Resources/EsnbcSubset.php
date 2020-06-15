@@ -23,6 +23,8 @@ class EsnbcSubset extends JsonResource
             'dimensions' => $this->dimensions,
             'customer_purchase_order_number' => $this->customer_purchase_order_number,
             'shipment_tracking_number' => $this->shipment_tracking_number,
-        ];        
+            'update_type' => $this->update_type,
+            'is_updated_to_fabric' => $this->is_updated_to_fabric,
+        ];
     }
 }
