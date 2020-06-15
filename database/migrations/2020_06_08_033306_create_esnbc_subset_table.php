@@ -22,6 +22,7 @@ class CreateEsnbcSubsetTable extends Migration
             $table->string('dimensions', 100)->nullable();
             $table->string('customer_purchase_order_number', 100)->nullable();
             $table->string('shipment_tracking_number', 100)->nullable();
+            $table->string('update_type', 10)->default('Create');
             $table->boolean('is_updated_to_fabric')->default(false);
             $table->timestamps();
         });

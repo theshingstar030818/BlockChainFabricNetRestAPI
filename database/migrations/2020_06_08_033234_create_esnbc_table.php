@@ -21,6 +21,7 @@ class CreateEsnbcTable extends Migration
             $table->string('supplier', '100')->nullable();
             $table->string('origin', '100')->nullable();
             $table->float('price', 8, 2)->nullable();
+            $table->string('update_type', 10)->default('Create');
             $table->boolean('is_updated_to_fabric')->default(false);
             $table->timestamps();
         });
