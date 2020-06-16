@@ -27,11 +27,13 @@ class EsnbcSubsetController extends Controller
      * @param  \App\EsnbcSubset  $esnbcSubset
      * @return \Illuminate\Http\Response
      */
-    public function qrcode(EsnbcSubset $esnbc_subset)
+    public function qrcode(Request $request, EsnbcSubset $esnbc_subset)
     {
         $qrcode = new Generator;
         // $qrcode->format('png');
-        return $qrcode->size(250)->generate('Make a qrcode without Laravel!');
+        // http://199.188.204.125/api/esnbcsubsets_for_mobile/1
+        $full_url = $request->fullUrl();
+        return $qrcode->size(250)->generate($full_url);
         // print_r($esnbc_subset);exit;
         // return QrCode::size(500)->generate('W3Adda Laravel Tutorial');
         // return view('esnbc-subsets.edit')->with(compact('esnbc_subset'));
