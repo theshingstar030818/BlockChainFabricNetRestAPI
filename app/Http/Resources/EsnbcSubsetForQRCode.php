@@ -17,20 +17,20 @@ class EsnbcSubsetForQRCode extends JsonResource
         // print_r($this->esnbc->product_id);exit;
         // return parent::toArray($request);
         return [
-            'id' => $this->id,
-            'batches_info_id' => $this->batches_info_id,
-            'production_date' => $this->production_date,
-            'best_before_date' => $this->best_before_date,
-            'net_weight' => $this->net_weight,
-            'dimensions' => $this->dimensions,
-            'customer_purchase_order_number' => $this->customer_purchase_order_number,
-            'shipment_tracking_number' => $this->shipment_tracking_number,
-            'product_id' => $this->esnbc->product_id,
-            'product_name' => $this->product_name,
-            'certification' => $this->certification,
-            'supplier' => $this->supplier,
-            'origin' => $this->origin,
-            'price' => $this->price,
+            'ID' => $this->id,
+            'Batches Info' => $this->batches_info_id,
+            'Production Date' => $this->production_date,
+            'Best Before Date' => $this->best_before_date,
+            'Net Weight(Kg)' => $this->net_weight,
+            'Dimensions(m)' => $this->dimensions,
+            'Customer Purchase Order Number' => $this->customer_purchase_order_number,
+            'Shipmetn Tracking Number' => $this->shipment_tracking_number,
+            'Product ID' => $this->esnbc->product_id,
+            'Product Name' => $this->product_name,
+            'Certification' => $this->certification,
+            'Supplier' => $this->supplier,
+            'Origin' => $this->origin,
+            'Price' => $this->price,
         ];        
     }
 }

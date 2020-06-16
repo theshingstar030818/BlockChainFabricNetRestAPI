@@ -31,8 +31,11 @@ class EsnbcSubsetController extends Controller
     {
         $qrcode = new Generator;
         // $qrcode->format('png');
-        // http://199.188.204.125/api/esnbcsubsets_for_mobile/1
+        // convert http://199.188.204.125/esnbc-subsets/1/qrcode  ->  http://199.188.204.125/api/esnbcsubsets_for_mobile/1
         $full_url = $request->fullUrl();
+        $full_url = str_replace("esnbc-subsets", "api/esnbcsubsets_for_mobile", $full_url); 
+        $full_url = str_replace("/qrcode", "", $full_url); 
+
         return $qrcode->size(250)->generate($full_url);
         // print_r($esnbc_subset);exit;
         // return QrCode::size(500)->generate('W3Adda Laravel Tutorial');
