@@ -15,6 +15,7 @@
             <th>Update Type</th>
             <th>Fabric Net Status</th>
             <th>QR Code</th>
+            <th></th>
         </tr>
     </thead>
     <tbody>
@@ -59,6 +60,21 @@
                         QR Code
                     </a>
                 </td>
+                <td>
+                    {!! Form::open([
+                        'method' => 'DELETE',
+                        'url' => [route('esnbc-subset-destroy',['esnbc_subset' => $esnbc_subset->id])],
+                        'style' => 'display:inline'
+                    ]) !!}
+                        {{ method_field('delete') }} 
+                        {!! Form::button('<i class="fa fa-trash-o" aria-hidden="true"></i>', array(
+                                'type' => 'submit',
+                                'class' => 'btn btn-danger btn-sm',
+                                'title' => 'Delete Esnbc Subset',
+                                'onclick'=>'return confirm("Confirm delete?")'
+                        )) !!}
+                    {!! Form::close() !!}
+                </td>                
             </tr>
         @empty
             <tr>

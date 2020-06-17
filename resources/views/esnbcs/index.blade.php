@@ -13,6 +13,7 @@
             <th>Price</th>
             <th>Update Type</th>
             <th>Fabric Net Status</th>
+            <th></th>
         </tr>
     </thead>
     <tbody>
@@ -57,7 +58,7 @@
                         {!! Form::button('<i class="fa fa-trash-o" aria-hidden="true"></i>', array(
                                 'type' => 'submit',
                                 'class' => 'btn btn-danger btn-sm',
-                                'title' => 'Delete User',
+                                'title' => 'Delete Esnbc',
                                 'onclick'=>'return confirm("Confirm delete?")'
                         )) !!}
                     {!! Form::close() !!}
