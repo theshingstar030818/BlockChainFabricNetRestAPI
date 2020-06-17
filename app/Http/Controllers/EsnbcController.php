@@ -123,6 +123,7 @@ class EsnbcController extends Controller
         // print_r($esnbc->update_type);exit();
         // $esnbc->delete();
         $esnbc->update_type = "Delete";
+        $esnbc->is_updated_to_fabric = 0;
         $esnbc->save();
 
         return redirect(route('esnbc-index'))->with('message','esnbc successfully removed. But not updated to fabric net yet(status: pending).');

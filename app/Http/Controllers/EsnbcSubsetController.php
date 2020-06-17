@@ -115,6 +115,7 @@ class EsnbcSubsetController extends Controller
         // print_r($esnbcSubset->update_type);exit();
         // $esnbcSubset->delete();
         $esnbc_subset->update_type = "Delete";
+        $esnbc_subset->is_updated_to_fabric = 0;
         $esnbc_subset->save();
 
         return redirect(route('esnbc-subset-index'))->with('message','esnbc-subset successfully removed. But not updated to fabric net yet(status: pending).');
