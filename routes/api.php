@@ -34,11 +34,28 @@ Route::get('esnbcsubsets_for_mobile/{id}', function ($id) {
 
 //////////////////////////// Esnbc ////////////////////////////////////////
 Route::get('esnbcs/{batches_info}', function ($batches_info) {
-    return new EsnbcResource(Esnbc::where('batches_info', '=', $batches_info)->first());
+    $results = Esnbc::where('batches_info', '=', $batches_info);
+    if($results->count())
+    {
+        return new EsnbcResource($results->first());
+    }
+    else
+    {
+        return [];
+    }
 });
 
 Route::get('esnbcs_for_fabric_get', function () {
-    return new EsnbcResource(Esnbc::where('is_updated_to_fabric', '=', 0)->orderBy('updated_at','asc')->first());
+    // return new EsnbcResource(Esnbc::where('is_updated_to_fabric', '=', 0)->orderBy('updated_at','asc')->first());
+    $results = Esnbc::where('is_updated_to_fabric', '=', 0)->orderBy('updated_at','asc');
+    if($results->count())
+    {
+        return new EsnbcResource($results->first());
+    }
+    else
+    {
+        return [];
+    }    
 });
 
 Route::get('esnbcs_for_fabric_set/{batches_info}', function ($batches_info) {
@@ -58,11 +75,29 @@ Route::get('esnbcs_for_fabric_set/{batches_info}', function ($batches_info) {
 
 //////////////////////////// EsnbcSubset ////////////////////////////////////////
 Route::get('esnbc_subsets/{id}', function ($id) {
-    return new EsnbcSubsetResource(EsnbcSubset::where('id', '=', $id)->first());
+    // return new EsnbcSubsetResource(EsnbcSubset::where('id', '=', $id)->first());
+    $results = EsnbcSubset::where('id', '=', $id);
+    if($results->count())
+    {
+        return new EsnbcSubsetResource($results->first());
+    }
+    else
+    {
+        return [];
+    } 
 });
 
 Route::get('esnbc_subsets_for_fabric_get', function () {
-    return new EsnbcSubsetResource(EsnbcSubset::where('is_updated_to_fabric', '=', 0)->orderBy('updated_at','asc')->first());
+    // return new EsnbcSubsetResource(EsnbcSubset::where('is_updated_to_fabric', '=', 0)->orderBy('updated_at','asc')->first());
+    $results = EsnbcSubset::where('is_updated_to_fabric', '=', 0)->orderBy('updated_at','asc');
+    if($results->count())
+    {
+        return new EsnbcSubsetResource($results->first());
+    }
+    else
+    {
+        return [];
+    }     
 });
 
 Route::get('esnbc_subsets_for_fabric_set/{id}', function ($id) {
