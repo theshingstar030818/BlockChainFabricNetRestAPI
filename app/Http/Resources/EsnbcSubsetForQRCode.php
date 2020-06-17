@@ -24,13 +24,13 @@ class EsnbcSubsetForQRCode extends JsonResource
             'Net Weight(Kg)' => $this->net_weight,
             'Dimensions(m)' => $this->dimensions,
             'Customer Purchase Order Number' => $this->customer_purchase_order_number,
-            'Shipmetn Tracking Number' => $this->shipment_tracking_number,
+            'Shipment Tracking Number' => $this->shipment_tracking_number,
             'Product ID' => $this->esnbc->product_id,
-            'Product Name' => $this->product_name,
-            'Certification' => $this->certification,
-            'Supplier' => $this->supplier,
-            'Origin' => $this->origin,
-            'Price' => $this->price,
+            'Product Name' => $this->esnbc->product_name,
+            'Certification' => $this->esnbc->certification,
+            'Supplier' => $this->esnbc->supplier,
+            'Origin' => $this->esnbc->origin,
+            'Price' => $this->esnbc->price,
         ];        
     }
 }
