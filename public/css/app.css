@@ -12473,3 +12473,12 @@ li.nav-item.active {
   text-decoration: underline;
 }
 
+.logo-img {
+  width: 150px;
+}
+
+.logo-text {
+  font-size: 29px;
+  font-family: cursive;
+}
+
