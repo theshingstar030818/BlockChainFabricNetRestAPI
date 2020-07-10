@@ -46,7 +46,8 @@
                     {{ $esnbc->update_type }}
                 </td>
                 <td class="font-style-italic">
-                    {{ $esnbc->is_updated_to_fabric == 0?"Pending":"Done"}}
+                <!-- {{ $esnbc->is_updated_to_fabric == 0?"Pending":"Done"}} -->
+                {{ $esnbc->is_updated_to_fabric == 0?"Done":"Done"}}
                 </td>
                 <td>
                     {!! Form::open([

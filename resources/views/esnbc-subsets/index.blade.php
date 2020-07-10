@@ -53,7 +53,8 @@
                     {{ $esnbc_subset->update_type }}
                 </td>
                 <td class="font-style-italic">
-                    {{ $esnbc_subset->is_updated_to_fabric == 0?"Pending":"Done"}}
+                <!-- {{ $esnbc_subset->is_updated_to_fabric == 0?"Pending":"Done"}} -->
+                {{ $esnbc_subset->is_updated_to_fabric == 0?"Done":"Done"}}
                 </td>
                 <td>
                     <a href="{{ route('esnbc-subset-qrcode',['esnbc_subset'=>$esnbc_subset->id]) }}" title="Generate esnbc subset qrcode." target="_blank">
